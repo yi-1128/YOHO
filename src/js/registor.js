@@ -1,24 +1,6 @@
 //导航下拉效果
-$('.li_grey').each(function(i,value){
-    $(value).hover(
-        function(){
-            $(this).css({
-                background : '#efefef'
-            });
-            $(this).find('.li_mark').each(function(i,value){
-                $(value).css('display','block');
-            })
-        },
-        function(){
-            $(this).css({
-                background : ''
-            })
-            $('.li_mark').each(function(i,value){
-                $(value).css('display','none');
-            })
-        }
-    )
-})
+// public中
+
 //二维码
 $('.reg b').hover(
     function(){
@@ -28,3 +10,23 @@ $('.reg b').hover(
         $('.reg_mark').css('display','none');
     }
 )
+
+//普通登录
+//邮箱手机号码验证
+$('.main_big_right #uname').blur(function(){
+    var re = /^\d+$/g;
+    if(re.test($(this).val())){
+        $(this).next().text('合法').css('color','green');
+    }else{
+        $(this).next().text('邮箱或手机号不合法').css('color','red');
+    }
+})
+//验证密码
+$('.main_big_right #upwd').blur(function(){
+    var re = /^\d+$/g;
+    if(re.test($(this).val())){
+        $(this).next().text('合法').css('color','green');
+    }else{
+        $(this).next().text('密码不合法').css('color','red');
+    }
+})

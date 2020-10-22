@@ -1,49 +1,5 @@
 // header 
-#head{
-    width: 1000px;
-    .a_logo {
-        float: left;
-        margin-top: 20px;
-    }
-    .h_right{
-      float: right;
-      margin-top: 20px;
-      ul {
-          position: relative;
-          a {
-            font-size: 12px;
-          }
-          li{
-              float: left;
-              padding: 0 8px;
-              height: 32px;
-              // vertical-align: middle;
-              line-height: 32px;
-              text-align: center;
-              &:first-child {
-                width: 145px;
-                border: none;
-              }
-          }
-          .li_grey{
-              width: 80px;
-              .li_mark{
-                z-index: 1;
-                display: none;
-                p{
-                  width: 80px;
-                  text-align: center;
-                  font-size: 12px;
-                  border-top: 1px solid #8e8e8e;
-                  margin-left: -8px;
-                  background-color: #efefef;
-                  // display: none;
-                }
-              }
-            }
-      }
-  }
-}
+//public中
 
 .main_box{
     margin-top: 20px;

@@ -59,6 +59,28 @@ $('.h_right ul .phone').mouseleave(function(){
     $('.pho_mark').css('display','none');
 })
 
+//导航下拉效果（登录注册购物车页面）
+$('.li_grey').each(function(i,value){
+    $(value).hover(
+        function(){
+            $(this).css({
+                background : '#efefef'
+            });
+            $(this).find('.li_mark').each(function(i,value){
+                $(value).css('display','block');
+            })
+        },
+        function(){
+            $(this).css({
+                background : ''
+            })
+            $('.li_mark').each(function(i,value){
+                $(value).css('display','none');
+            })
+        }
+    )
+})
+
 //购物车
 $('.input .icon-gouwuche').hover(
     function(){
