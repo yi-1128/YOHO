@@ -5,6 +5,7 @@ $('.li_grey').each(function(i,value){
             $(this).css({
                 background : '#efefef'
             });
+            $(this).children('.iconfont').css('transform','rotate(90deg)');
             $(this).find('.li_mark').each(function(i,value){
                 $(value).css('display','block');
             })
@@ -61,4 +62,14 @@ $(function(){
 		    $('.mian_big_right_num').hide();//就隐藏div
 		}
     })
+})
+
+//邮箱手机号码验证
+$('.normal #uname').blur(function(){
+    var re = /^\d+$/g;
+    if(re.test($(this).val())){
+        $(this).next().text('合法').css('color','green');
+    }else{
+        $(this).next().text('邮箱或手机号不合法').css('color','red');
+    }
 })
